@@ -1,8 +1,11 @@
 <?php 
 
-$paragrafo_casuale = "In una terra lontana, dietro le montagne Parole, lontani dalle terre di Vocalia e Consonantia, vivono i testi casuali. Vivono isolati nella cittadina di Lettere.";
+$paragrafo_casuale = "In una terra lontana, dietro le montagne Parole, lontani dalle terre di Vocalia e Consonantia, vivono i testi casuali. vivono isolati nella cittadina di Lettere.";
 
-var_dump(strlen($paragrafo_casuale))
+$output = str_replace($_GET["random"], '***', $paragrafo_casuale)
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -15,5 +18,9 @@ var_dump(strlen($paragrafo_casuale))
 </head>
 <body>
     <h1> <?php echo $paragrafo_casuale  ?>  </h1>
+    <p> La lunghezza del paragrafo è:<?php echo strlen($paragrafo_casuale)  ?></p>
+
+    <h1><?php echo $output  ?> </h1>
+    
 </body>
 </html>
